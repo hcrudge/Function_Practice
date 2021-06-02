@@ -71,3 +71,56 @@
 //     }
 // }
 // evenOrOdd(arr)
+
+
+// Practice: Double Functions
+
+// const words = [
+//     "The", "killing", "complex", "houses",
+//     "married", "kittens", "and", "single",
+//     "soldiers", "and", "their", "kleptomaniacal",
+//     "families"
+// ]
+
+/*
+    Function to filter out `k` words
+    (Google 'javascript startswith' to get started)
+ */
+// let kWords =[]
+// let noKWords=[]
+// const removeKWords = () => {
+    
+//     for(const word of words) {
+        
+//         if (word.startsWith("k")) {
+        
+//             kWords.push(word)
+//         }
+//         else { 
+//             noKWords.push(word) 
+//         };
+//     };
+//     return noKWords
+// };
+
+/*
+    Function to build a single string from the array
+    (Google 'javascript combine all items in array' to get started)
+ */
+
+// const singleString =() => {
+//     const newestWords= removeKWords().join(' ')
+//     return newestWords
+// }
+
+/*
+Invoke the filtering function and store its return value
+*/
+
+// console.log(singleString())
+
+/*
+    Invoke the string building function, and pass the
+    return value of the previous function as an argument
+*/
+
