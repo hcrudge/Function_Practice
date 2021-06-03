@@ -126,11 +126,94 @@ Invoke the filtering function and store its return value
 
 // Practice: You Can Tune a Piano, But You Can't... -
 
-const chanceOfTuna = () => {
-    if ((Math.random() * 3) > 2) {
-        console.log("Sven hooked a tuna! :)")
-    }
-    else {console.log("Sven came up empty-handed. :(")}
-}
-chanceOfTuna()
+// const chanceOfTuna = () => {
+//     if ((Math.random() * 3) > 2) {
+//         console.log("Sven hooked a tuna! :)")
+//     }
+//     else {console.log("Sven came up empty-handed. :(")}
+// }
+// chanceOfTuna()
 
+// Practice: Fast Food (Multiple Parameters)
+
+// Practice: Same Chores, Different Days -
+
+// const twice = number => number * 2
+
+// twiceTwo = twice(2)
+// console.log(twiceTwo)  // 4
+
+// twiceSix = twice(6)
+// console.log(twiceSix)  // 12
+
+// twiceThirteen = twice(13)
+// console.log(twiceThirteen)  // 26
+
+// const timesFive = number => number * 5
+// console.log(timesFive(2))  // 10
+// console.log(timesFive(5))  // 25
+
+// const square = number => number * number
+// console.log(square(4))  // 16
+// console.log(square(13))  // 169
+
+/*
+    I can make any number bigger, but you need to tell
+    me how much bigger by giving me the function you
+    want me to invoke on the number
+*/
+// const bigify = (number, operationFunction) => {
+//     const result = operationFunction(number)
+//     return result
+// }
+// console.log(bigify(7,square))
+
+// const number = 7
+// const by2 = bigify(number, twice)  // 14
+// const by5 = bigify(number, timesFive)  // 35
+// const byItself = bigify(number, square)  // 49
+
+// Defining the Chores 
+
+// const sally = {
+//     firstName: "Sally",
+//     lastName: "McPherson"
+// };
+
+// const grocery = (person) => `${person.firstName} ${person.lastName} went to the grocery store.`
+// const errands = (person) => `${person.firstName} ${person.lastName} ran errands.`
+// const library = (person) => `${person.firstName} ${person.lastName} borrowed 16 books and 5 movies from the library.`
+// const read = (person) => `${person.firstName} ${person.lastName} read 3 of the borrowed library books.`
+// const watched = (person) => `${person.firstName} ${person.lastName} watched a new TV show.`
+// const garden = (person) => `${person.firstName} ${person.lastName} weeded the garden.`
+
+// console.log(garden(sally))
+
+// Lazy Day - 
+// const sally = {
+//         firstName: "Sally",
+//         lastName: "McPherson"
+//     };
+// const gardening = (chore) => `weeded the ${garden}`
+
+// const dayPlanner = (chore, person, day) => `${person.firstName} ${person.lastName} ${chore} on ${day}.`
+
+// const output = dayPlanner(gardening("garden"), sally, "Tuesday")
+
+// console.log(output)
+
+// Busy Day - 
+
+const sally = {
+        firstName: "Sally",
+        lastName: "McPherson"
+    };
+const reading = (firstChore) => `${firstChore} 3 borrowed library books`
+const watching = (secondChore) => `${secondChore} a new TV show`
+const gardening = (thirdChore) => `weeded the ${thirdChore}`  
+
+const dayPlanner = (firstChore, secondChore, thirdChore, person, day) => `On ${day}, ${person.firstName} ${person.lastName} ${firstChore}, ${person.firstName} ${person.lastName} ${secondChore}, and ${person.firstName} ${person.lastName} ${thirdChore}.`
+    
+const output = dayPlanner(reading("read"), watching("watched"), gardening("garden"),sally,"Tuesday")
+
+console.log(output)
