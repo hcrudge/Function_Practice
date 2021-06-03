@@ -124,3 +124,13 @@ Invoke the filtering function and store its return value
     return value of the previous function as an argument
 */
 
+// Practice: You Can Tune a Piano, But You Can't... -
+
+const chanceOfTuna = () => {
+    if ((Math.random() * 3) > 2) {
+        console.log("Sven hooked a tuna! :)")
+    }
+    else {console.log("Sven came up empty-handed. :(")}
+}
+chanceOfTuna()
+
